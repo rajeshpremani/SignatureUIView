@@ -1,2 +1,2 @@
-# SignatureView
+# SignatureUIView
 UIView for capturing signature.

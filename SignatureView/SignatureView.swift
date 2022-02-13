@@ -9,16 +9,22 @@
 import Foundation
 import UIKit
 
-//protocol SignatureViewDelegate: AnyObject {
+public protocol SignatureViewDelegate: AnyObject {
 //    func enableScrolling()
 //    func disableScrolling()
-//}
+    func signatureDidStart()
+    func signatureDidEnd()
+}
 
 public class SignatureView: UIView{
     var line = [CGPoint]()
     var lines = [[CGPoint]]()
     
-//    weak var delegate: SignatureViewDelegate?
+    public weak var delegate: SignatureViewDelegate?
+    
+    private var signatureColor : UIColor = .black
+    private var signatureLineWidth : CGFloat = 2
+    private var signatureLineCap : CGLineCap = .butt
     
     public override func draw(_ rect: CGRect) {
         super.draw(rect)
@@ -26,9 +32,9 @@ public class SignatureView: UIView{
         guard let context = UIGraphicsGetCurrentContext() else {return}
 
         //setup context view
-        context.setStrokeColor(UIColor.black.cgColor)
-        context.setLineWidth(4)
-        context.setLineCap(.butt)
+        context.setStrokeColor(signatureColor.cgColor)
+        context.setLineWidth(signatureLineWidth)
+        context.setLineCap(signatureLineCap)
 
         lines.forEach { (line) in
             for (index, point) in line.enumerated(){
@@ -43,28 +49,28 @@ public class SignatureView: UIView{
     }
     
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        self.delegate?.disableScrolling()
+        self.delegate?.signatureDidStart()
         lines.append([CGPoint]())
     }
 
     //track the fingure as we move on view
     public override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        self.delegate?.disableScrolling()
         guard let point = touches.first?.location(in: self) else {return}
-        print(point)
+//        print(point)
         guard var lastLine = lines.popLast() else {return}
         lastLine.append(point)
         lines.append(lastLine)
         setNeedsDisplay()
     }
     
-//    public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        self.delegate?.enableScrolling()
-//    }
-//
-//    public override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        self.delegate?.enableScrolling()
-//    }
+    public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.delegate?.signatureDidEnd()
+    }
+
+    public override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+//        self.delegate?.signatureDidStart()
+    }
     
     
 }
@@ -100,7 +106,9 @@ extension SignatureView{
     }
     
     public func cornerRadius(radius : CGFloat) {
+        self.clipsToBounds = true
         self.layer.cornerRadius = radius
+        
     }
     
     public func getSignature() -> UIImage{
@@ -109,5 +117,17 @@ extension SignatureView{
             self.drawHierarchy(in: self.bounds, afterScreenUpdates: true)
         }
         return image
+    }
+    
+    public func signatureColor(color: UIColor){
+        self.signatureColor = color
+    }
+    
+    public func signatureLineWidth(lineWidth: CGFloat){
+        self.signatureLineWidth = lineWidth
+    }
+    
+    public func signatureLineCap(lineCap: CGLineCap){
+        self.signatureLineCap = lineCap
     }
 }

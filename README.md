@@ -5,10 +5,9 @@ UIView for capturing signature.
 SignatureUIView is available through cocoapods. To install it add the following pod in podfile.<br />
 `pod 'SingatureUIView'`
 
-
-# Features
-
-
+# Usage
+To see a quick demo, simply open Example project. OR set the custom class of view as SignatureView.
+![](https://github.com/rajeshpremani/SignatureUIView/blob/main/Example/Assets/customClass.png)
 
 
 # Customization

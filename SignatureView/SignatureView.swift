@@ -10,8 +10,6 @@ import Foundation
 import UIKit
 
 public protocol SignatureViewDelegate: AnyObject {
-//    func enableScrolling()
-//    func disableScrolling()
     func signatureDidStart()
     func signatureDidEnd()
 }
@@ -56,7 +54,6 @@ public class SignatureView: UIView{
     //track the fingure as we move on view
     public override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let point = touches.first?.location(in: self) else {return}
-//        print(point)
         guard var lastLine = lines.popLast() else {return}
         lastLine.append(point)
         lines.append(lastLine)
@@ -69,7 +66,6 @@ public class SignatureView: UIView{
 
     public override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-//        self.delegate?.signatureDidStart()
     }
     
     

@@ -15,6 +15,7 @@
 		E39498AD27B8F51800DC2F32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E39498AB27B8F51800DC2F32 /* LaunchScreen.storyboard */; };
 		E39498B627B8F6B500DC2F32 /* SignatureView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E39498B527B8F6B500DC2F32 /* SignatureView.framework */; };
 		E39498B727B8F6B500DC2F32 /* SignatureView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E39498B527B8F6B500DC2F32 /* SignatureView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E39498BD27B904E600DC2F32 /* delegate.png in Resources */ = {isa = PBXBuildFile; fileRef = E39498BC27B904E600DC2F32 /* delegate.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +42,7 @@
 		E39498AC27B8F51800DC2F32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E39498AE27B8F51800DC2F32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E39498B527B8F6B500DC2F32 /* SignatureView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SignatureView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E39498BC27B904E600DC2F32 /* delegate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delegate.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		E394989427B8F51700DC2F32 = {
 			isa = PBXGroup;
 			children = (
+				E39498B927B903A000DC2F32 /* Assets */,
 				E394989F27B8F51700DC2F32 /* Example */,
 				E394989E27B8F51700DC2F32 /* Products */,
 				E39498B427B8F6B500DC2F32 /* Frameworks */,
@@ -92,6 +95,14 @@
 				E39498B527B8F6B500DC2F32 /* SignatureView.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E39498B927B903A000DC2F32 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				E39498BC27B904E600DC2F32 /* delegate.png */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +166,7 @@
 			files = (
 				E39498AD27B8F51800DC2F32 /* LaunchScreen.storyboard in Resources */,
 				E39498AA27B8F51800DC2F32 /* Assets.xcassets in Resources */,
+				E39498BD27B904E600DC2F32 /* delegate.png in Resources */,
 				E39498A827B8F51700DC2F32 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "SignatureUIView"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.1"
   spec.summary      = "This is best framework for capturing signature."
   spec.description  = "SignatureUIView is a lightweight, fast and customizable option for capturing signatures within your application. You can retrieve the signature as a UIImage."
   spec.homepage     = "https://github.com/rajeshpremani/SignatureView"

@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         setView()
     }
 
@@ -29,7 +28,7 @@ class ViewController: UIViewController {
     func setView(){
         signatureView.delegate = self
         signatureView.signatureColor(color: .blue)
-        signatureView.signatureLineCap(lineCap: .square)
+        signatureView.signatureLineCap(lineCap: .round)
         signatureView.signatureLineWidth(lineWidth: 10)
         signatureView.cornerRadius(radius: 30)
         signatureView.setBorder(withColor: .black, withWidth: 3)
@@ -45,6 +44,4 @@ extension ViewController: SignatureViewDelegate{
     func signatureDidEnd() {
         print("Ends")
     }
-    
-    
 }

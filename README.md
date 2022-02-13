@@ -6,7 +6,7 @@ SignatureUIView is available through cocoapods. To install it add the following 
 `pod 'SingatureUIView'`
 
 # Usage
-To see a quick demo, simply open Example project. OR set the custom class of view as SignatureView.
+To see a quick demo, simply open Example project. Or set the custom class of view as SignatureView.
 ![](https://github.com/rajeshpremani/SignatureUIView/blob/main/Example/Assets/customClass.png)
 
 

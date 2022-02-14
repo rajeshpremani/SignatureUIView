@@ -5,7 +5,9 @@ UIView for capturing signature.<br />
 
 # Installation
 SignatureUIView is available through cocoapods. To install it add the following pod in podfile.<br />
-`pod 'SingatureUIView'`
+```js
+pod 'SingatureUIView'
+```
 
 # Usage
 To see a quick demo, simply open Example project. Or set the custom class of view as SignatureView.
@@ -15,13 +17,19 @@ To see a quick demo, simply open Example project. Or set the custom class of vie
 # Customization
 You can customize SignatureView <br />
 ### Line Color
-> self.signatureView.signatureColor(color: .blue)
+```js
+ self.signatureView.signatureColor(color: .blue)
+```
 
 ### Line Width
+```js
 > self.signatureView.signatureLineWidth(lineWidth: 4)
+```
 
 ### Background Color
-> self.signatureView.backgroundColor(color: .cyan)
+```js
+self.signatureView.backgroundColor(color: .cyan)
+```js
 
 ### Corner Radius
 > self.signatureView.cornerRadius(radius: 10)

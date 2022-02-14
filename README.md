@@ -1,5 +1,5 @@
 # SignatureUIView
-UIView for capturing signature.
+UIView for capturing signature.<br />
 ![](https://github.com/rajeshpremani/SignatureUIView/blob/main/Example/Assets/sign.gif)
 
 

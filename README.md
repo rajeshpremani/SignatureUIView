@@ -23,31 +23,39 @@ You can customize SignatureView <br />
 
 ### Line Width
 ```js
-> self.signatureView.signatureLineWidth(lineWidth: 4)
+ self.signatureView.signatureLineWidth(lineWidth: 4)
 ```
 
 ### Background Color
 ```js
 self.signatureView.backgroundColor(color: .cyan)
-```js
+```
 
 ### Corner Radius
-> self.signatureView.cornerRadius(radius: 10)
-
+```js
+ self.signatureView.cornerRadius(radius: 10)
+```
 ### Border
-> self.signatureView.setBorder(withColor: .black, withWidth: 3)
-
+```js
+ self.signatureView.setBorder(withColor: .black, withWidth: 3)
+```
 ### Line Cap
-> self.signatureView.signatureLineCap(lineCap: .round)
-
+```js
+ self.signatureView.signatureLineCap(lineCap: .round)
+```
 ### Delete Signature
-> self.signatureView.delete()
-
+```js
+ self.signatureView.delete()
+```
 ### Undo Signature
-> self.signatureView.undo()
+```js
+ self.signatureView.undo()
+```
 
 # Get Signature as an image
-> self.signatureView.getSignature()
+```js
+ self.signatureView.getSignature()
+```
 
 # Delegate
 ![](https://github.com/rajeshpremani/SignatureUIView/blob/main/Example/Assets/delegate.png)
